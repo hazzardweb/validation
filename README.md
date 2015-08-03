@@ -3,6 +3,7 @@
 ### Installation
 
 `composer require illuminate/validation`
+
 `composer require hazzard/validation`
 
 ### Usage 
