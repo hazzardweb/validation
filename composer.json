@@ -1,0 +1,20 @@
+{
+    "name": "hazzard/validation",
+    "description": "Use Illuminate Validation outside Laravel.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cretu Eusebiu",
+            "email": "cretu.eusebiu@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "illuminate/validation": "5.0.*|5.1.*",
+    },
+    "autoload": {
+        "psr-4": {
+            "Hazzard\\Validation\\": "src/"
+        }
+    }
+}
