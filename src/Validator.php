@@ -87,7 +87,7 @@ class Validator
      *
      * @return \Illuminate\Contracts\Validation\Factory
      */
-    public function getValidationFactory()
+    public function getFactory()
     {
         return $this->factory;
     }
@@ -126,7 +126,7 @@ class Validator
      */
     public function __call($method, $arguments)
     {
-        $factory = $this->getValidationFactory();
+        $factory = $this->getFactory();
 
         return call_user_func_array([$factory, $method], $arguments);
     }
@@ -140,7 +140,7 @@ class Validator
      */
     public static function __callStatic($method, $arguments)
     {
-        $factory = static::$instance->getValidationFactory();
+        $factory = static::$instance->getFactory();
 
         return call_user_func_array([$factory, $method], $arguments);
     }
