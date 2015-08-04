@@ -126,9 +126,7 @@ class Validator
      */
     public function __call($method, $arguments)
     {
-        $factory = $this->getFactory();
-
-        return call_user_func_array([$factory, $method], $arguments);
+        return call_user_func_array([$this->factory, $method], $arguments);
     }
 
     /**
