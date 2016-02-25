@@ -2,7 +2,7 @@
 
 namespace Hazzard\Validation;
 
-use Illuminate\Support\Arr;
+use Hazzard\Validation\Arr;
 use Illuminate\Support\Collection;
 use Symfony\Component\Translation\TranslatorInterface;
 
@@ -20,7 +20,7 @@ class Translator implements TranslatorInterface
      *
      * @param array $lines
      */
-    public function __construct(array $lines = [])
+    public function __construct(array $lines = array())
     {
         if (count($lines)) {
             $this->setLines($lines);
@@ -35,7 +35,7 @@ class Translator implements TranslatorInterface
      */
     public function setLines(array $lines)
     {
-        $this->lines = ['validation' => $lines];
+        $this->lines = array('validation' => $lines);
     }
 
     /**
@@ -47,7 +47,7 @@ class Translator implements TranslatorInterface
      * @param  string $locale
      * @return string
      */
-    public function trans($id, array $parameters = [], $domain = 'messages', $locale = null)
+    public function trans($id, array $parameters = array(), $domain = 'messages', $locale = null)
     {
         $line = Arr::get($this->lines, $id);
 
@@ -81,7 +81,7 @@ class Translator implements TranslatorInterface
     /**
      * @inheritDoc
      */
-    public function transChoice($id, $number, array $parameters = [], $domain = 'messages', $locale = null)
+    public function transChoice($id, $number, array $parameters = array(), $domain = 'messages', $locale = null)
     {
 
     }

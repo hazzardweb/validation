@@ -3,7 +3,7 @@
 namespace Hazzard\Validation;
 
 use Illuminate\Validation\Factory;
-use Illuminate\Contracts\Container\Container;
+use Illuminate\Container\Container;
 use Illuminate\Validation\DatabasePresenceVerifier;
 use Illuminate\Database\ConnectionResolverInterface;
 
@@ -24,7 +24,7 @@ class Validator
     /**
      * Register the validator.
      *
-     * @param \Illuminate\Contracts\Container\Container $container
+     * @param \Illuminate\Container\Container $container
      */
     public function __construct(Container $container = null)
     {
@@ -85,7 +85,7 @@ class Validator
     /**
      * Get the validation factory instance.
      *
-     * @return \Illuminate\Contracts\Validation\Factory
+     * @return \Illuminate\Validation\Factory
      */
     public function getFactory()
     {
@@ -95,7 +95,7 @@ class Validator
     /**
      * Get a translator instance.
      *
-     * @param  \Illuminate\Contracts\Container\Container $container
+     * @param  \Illuminate\Container\Container $container
      * @return \Symfony\Component\Translation\TranslatorInterface
      */
     protected function getTranslator(Container $container = null)
@@ -126,7 +126,7 @@ class Validator
      */
     public function __call($method, $arguments)
     {
-        return call_user_func_array([$this->factory, $method], $arguments);
+        return call_user_func_array(array($this->factory, $method), $arguments);
     }
 
     /**
@@ -140,6 +140,6 @@ class Validator
     {
         $factory = static::$instance->getFactory();
 
-        return call_user_func_array([$factory, $method], $arguments);
+        return call_user_func_array(array($factory, $method), $arguments);
     }
 }

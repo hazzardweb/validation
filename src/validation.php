@@ -1,6 +1,6 @@
 <?php
 
-return [
+return array(
 
     /*
     |--------------------------------------------------------------------------
@@ -21,12 +21,12 @@ return [
     'alpha_num'            => 'The :attribute may only contain letters and numbers.',
     'array'                => 'The :attribute must be an array.',
     'before'               => 'The :attribute must be a date before :date.',
-    'between'              => [
+    'between'              => array(
         'numeric' => 'The :attribute must be between :min and :max.',
         'file'    => 'The :attribute must be between :min and :max kilobytes.',
         'string'  => 'The :attribute must be between :min and :max characters.',
         'array'   => 'The :attribute must have between :min and :max items.',
-    ],
+    ),
     'boolean'              => 'The :attribute field must be true or false.',
     'confirmed'            => 'The :attribute confirmation does not match.',
     'date'                 => 'The :attribute is not a valid date.',
@@ -41,19 +41,19 @@ return [
     'in'                   => 'The selected :attribute is invalid.',
     'integer'              => 'The :attribute must be an integer.',
     'ip'                   => 'The :attribute must be a valid IP address.',
-    'max'                  => [
+    'max'                  => array(
         'numeric' => 'The :attribute may not be greater than :max.',
         'file'    => 'The :attribute may not be greater than :max kilobytes.',
         'string'  => 'The :attribute may not be greater than :max characters.',
         'array'   => 'The :attribute may not have more than :max items.',
-    ],
+    ),
     'mimes'                => 'The :attribute must be a file of type: :values.',
-    'min'                  => [
+    'min'                  => array(
         'numeric' => 'The :attribute must be at least :min.',
         'file'    => 'The :attribute must be at least :min kilobytes.',
         'string'  => 'The :attribute must be at least :min characters.',
         'array'   => 'The :attribute must have at least :min items.',
-    ],
+    ),
     'not_in'               => 'The selected :attribute is invalid.',
     'numeric'              => 'The :attribute must be a number.',
     'regex'                => 'The :attribute format is invalid.',
@@ -64,12 +64,12 @@ return [
     'required_without'     => 'The :attribute field is required when :values is not present.',
     'required_without_all' => 'The :attribute field is required when none of :values are present.',
     'same'                 => 'The :attribute and :other must match.',
-    'size'                 => [
+    'size'                 => array(
         'numeric' => 'The :attribute must be :size.',
         'file'    => 'The :attribute must be :size kilobytes.',
         'string'  => 'The :attribute must be :size characters.',
         'array'   => 'The :attribute must contain :size items.',
-    ],
+    ),
     'string'               => 'The :attribute must be a string.',
     'timezone'             => 'The :attribute must be a valid zone.',
     'unique'               => 'The :attribute has already been taken.',
@@ -86,11 +86,11 @@ return [
     |
     */
 
-    'custom' => [
-        'attribute-name' => [
+    'custom' => array(
+        'attribute-name' => array(
             'rule-name' => 'custom-message',
-        ],
-    ],
+        ),
+    ),
 
     /*
     |--------------------------------------------------------------------------
@@ -103,6 +103,6 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => array(),
 
-];
+);
